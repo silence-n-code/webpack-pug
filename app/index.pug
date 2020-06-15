@@ -4,17 +4,10 @@ html(lang="en")
         meta(charset="UTF-8")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         title Document
+        style
+            include ./menu.css
     body
-        h1 Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, maiores.
-        ul
-            -
-                let menu = [
-                    {url: "/", text: "Главная"},
-                    {url: "/reg", text: "Регистрация"},
-                    {url: "/aut", text: "Вход"},
-                    {url: "/page1", text: "Страница 1"},
-                    {url: "/page2", text: "Страница 2"}
-                ];
-            each element in menu
-                li
-                    a(href=element.url, style="font-size: 30px") #{element.text}
+        h1.h1 Pug
+        include ./menu.pug
+        script
+            include ./menu.js
