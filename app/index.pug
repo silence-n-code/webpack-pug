@@ -7,6 +7,14 @@ html(lang="en")
     body
         h1 Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, maiores.
         ul
-            -let arr = ['lorem', 'ipsum', 'dolor', 'sit', 'amet'];
-            each element,i in arr
-                li(style="font-size: "+(i+1)*10+"px") #{element} N - #{i}
+            -
+                let menu = [
+                    {url: "/", text: "Главная"},
+                    {url: "/reg", text: "Регистрация"},
+                    {url: "/aut", text: "Вход"},
+                    {url: "/page1", text: "Страница 1"},
+                    {url: "/page2", text: "Страница 2"}
+                ];
+            each element in menu
+                li
+                    a(href=element.url, style="font-size: 30px") #{element.text}
