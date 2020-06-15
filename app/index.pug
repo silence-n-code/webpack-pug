@@ -7,12 +7,15 @@ html(lang="en")
     body
         h1 Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, maiores.
         ul
+            -let url = "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Mops_oct09_cropped2.jpg/220px-Mops_oct09_cropped2.jpg";
+            -let style = "width: 250px";
+            -let text = "lorem";
             li
-                p Lorem, ipsum.
-                img(src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Mops_oct09_cropped2.jpg/220px-Mops_oct09_cropped2.jpg", style="width: 100px", alt="")
+                p #{text}, ipsum. #{text} 123 #{text} 123
+                img(src=url, style=style, alt="")
             li
-                p Lorem, ipsum.
-                img(src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Mops_oct09_cropped2.jpg/220px-Mops_oct09_cropped2.jpg", style="width: 100px", alt="")
+                p #{text}, ipsum.
+                img(src=url, style=style, alt="")
             li
-                p Lorem, ipsum.
-                img(src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Mops_oct09_cropped2.jpg/220px-Mops_oct09_cropped2.jpg", style="width: 100px", alt="")
+                p #{text}, ipsum.
+                img(src=url, style=style, alt="")
