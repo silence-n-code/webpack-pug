@@ -8,9 +8,10 @@ html(lang="en")
         h1 Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, maiores.
         ul
             -let url = "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Mops_oct09_cropped2.jpg/220px-Mops_oct09_cropped2.jpg";
-            -let style = "width: 250px";
+            -let style = "width: 50px";
             -let text = "lorem";
-            -for(let i = 0; i < 3; i++)
+            -let i = 0;
+            while i < 5
                 li
-                    p #{text}, ipsum. N - #{i}
+                    p #{text}, ipsum. N - #{i++}
                     img(src=url, style=style, alt="")
