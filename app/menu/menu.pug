@@ -1,3 +1,7 @@
+mixin elementMenu(isClass, element)
+    li(class="menu-list-element " + isClass)
+       a(href=element.url, class="menu-list-element-a") #{element.text}
+
 naw.menu
     ul.menu-list.js-menu-button
         -
@@ -11,8 +15,6 @@ naw.menu
         -let isPage = 0;
         each element,i in menu
             if isPage === i
-                li.menu-list-element.is-active
-                    a(href=element.url, class="menu-list-element-a") #{element.text}
+                +elementMenu("is-active", element)
             else
-                li.menu-list-element
-                    a(href=element.url, class="menu-list-element-a") #{element.text}
+                +elementMenu("", element)
