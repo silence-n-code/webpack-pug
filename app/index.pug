@@ -6,9 +6,10 @@ html(lang="en")
         title Document
         style
             include ./menu/menu.css
-            include ./caseWhen.css
+            include ./number-list/number-list.css
     body
         h1.h1 Pug
         include ./menu/menu.pug
         +menu(3)
-        include ./caseWhen.pug
+        include ./number-list/number-list.pug
+        +numberlist(5, "red")

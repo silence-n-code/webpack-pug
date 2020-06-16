@@ -1,0 +1,13 @@
+mixin numberlist(number, color)
+    ul.number-list
+        -for(let i = 1; i <= 15; i++)
+            if(! (i % number))
+                case color
+                    when "red"
+                        li.number-list-element.mod-red #{i}
+                    when "green"
+                        li.number-list-element.mod-green #{i}
+                    when "blue"
+                        li.number-list-element.mod-blue #{i}
+            else
+                li.number-list-element #{i}
