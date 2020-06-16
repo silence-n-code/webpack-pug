@@ -4,111 +4,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
-
-        html,
-        body {
-            margin: 0;
-            background-color: #3c3c3c;
-            color: #fff;
-            font-family: 'Roboto', sans-serif;
-        }
-
-        .h1 {
-            margin: 0;
-            font-size: 28px;
-            text-align: center;
-            border-bottom: solid 2px #5c5c5c;
-            padding: 15px 0 15px 0;
-        }
-
-        .menu-list {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            text-align: center;
-        }
-
-        .menu-list-element {
-            padding: 15px 0 15px 0;
-        }
-
-        .menu-list-element.is-active {
-            background-color: #1c1c1c;
-        }
-
-        .menu-list-element-a {
-            font-size: 24px;
-            color: #fff;
-            text-decoration: none;
-        }
-
-        .number-list {
-            display: flex;
-            flex-wrap: wrap;
-            list-style: none;
-        }
-
-        .number-list-element {
-            width: 100px;
-            height: 100px;
-            border: solid 2px #5c5c5c;
-            text-align: center;
-            line-height: 100px;
-            font-size: 30px;
-        }
-
-        .number-list-element.mod-red {
-            background-color: rgba(255, 0, 0, 0.5);
-        }
-
-        .number-list-element.mod-green {
-            background-color: rgba(0, 255, 0, 0.5);
-        }
-
-        .number-list-element.mod-blue {
-            background-color: rgba(0, 0, 255, 0.5);
-        }
-    </style>
+    <title>Pug</title>
+    <link href="main.css" rel="stylesheet">
 </head>
 
 <body>
     <h1 class="h1">Pug</h1>
     <naw class="menu">
         <ul class="menu-list js-menu-button">
-            <li class="menu-list-element is-active"><a class="menu-list-element-a" href="#">Главная</a></li>
-            <li class="menu-list-element"><a class="menu-list-element-a" href="#reg">Регистрация</a></li>
-            <li class="menu-list-element"><a class="menu-list-element-a" href="#aut">Вход</a></li>
-            <li class="menu-list-element"><a class="menu-list-element-a" href="#page1">Страница 1</a></li>
-            <li class="menu-list-element"><a class="menu-list-element-a" href="#page2">Страница 2</a></li>
+            <li class="menu-list-element is-active"><a class="menu-list-element-a" href="/">i % 1</a></li>
+            <li class="menu-list-element "><a class="menu-list-element-a" href="/two.html">i % 2</a></li>
+            <li class="menu-list-element "><a class="menu-list-element-a" href="/three.html">i % 3</a></li>
+            <li class="menu-list-element "><a class="menu-list-element-a" href="/five.html">i % 5</a></li>
+            <li class="menu-list-element "><a class="menu-list-element-a" href="/six.html">i % 6</a></li>
         </ul>
     </naw>
     <ul class="number-list">
-        <li class="number-list-element">0</li>
-        <li class="number-list-element">1</li>
-        <li class="number-list-element mod-red">2</li>
-        <li class="number-list-element">3</li>
-        <li class="number-list-element mod-green">4</li>
+        <li class="number-list-element mod-blue">1</li>
+        <li class="number-list-element mod-blue">2</li>
+        <li class="number-list-element mod-blue">3</li>
+        <li class="number-list-element mod-blue">4</li>
         <li class="number-list-element mod-blue">5</li>
-        <li class="number-list-element">6</li>
-        <li class="number-list-element">7</li>
-        <li class="number-list-element mod-red">8</li>
-        <li class="number-list-element">9</li>
-        <li class="number-list-element mod-green">10</li>
-        <li class="number-list-element">11</li>
-        <li class="number-list-element">12</li>
-        <li class="number-list-element">13</li>
-        <li class="number-list-element">14</li>
+        <li class="number-list-element mod-blue">6</li>
+        <li class="number-list-element mod-blue">7</li>
+        <li class="number-list-element mod-blue">8</li>
+        <li class="number-list-element mod-blue">9</li>
+        <li class="number-list-element mod-blue">10</li>
+        <li class="number-list-element mod-blue">11</li>
+        <li class="number-list-element mod-blue">12</li>
+        <li class="number-list-element mod-blue">13</li>
+        <li class="number-list-element mod-blue">14</li>
         <li class="number-list-element mod-blue">15</li>
     </ul>
-    <script>
-        document.querySelector('.js-menu-button').addEventListener('click', (e) => {
-            if (e.target.getAttribute('class') === 'menu-list-element-a')
-                alert('click' + e.target.innerText);
-        }, false);
-    </script>
     <script src="main.js"></script>
 </body>
 

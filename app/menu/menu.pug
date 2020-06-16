@@ -7,11 +7,11 @@ mixin menu(numPage)
         ul.menu-list.js-menu-button
             -
                 let menu = [
-                    {url: "#", text: "Главная"},
-                    {url: "#reg", text: "Регистрация"},
-                    {url: "#aut", text: "Вход"},
-                    {url: "#page1", text: "Страница 1"},
-                    {url: "#page2", text: "Страница 2"}
+                    {url: "/", text: "i % 1"},
+                    {url: "/two.html", text: "i % 2"},
+                    {url: "/three.html", text: "i % 3"},
+                    {url: "/five.html", text: "i % 5"},
+                    {url: "/six.html", text: "i % 6"}
                 ]
             each element,i in menu
                 if numPage === i
