@@ -2,19 +2,19 @@ mixin elementMenu(isClass, element)
     li(class="menu-list-element " + isClass)
        a(href=element.url, class="menu-list-element-a") #{element.text}
 
-naw.menu
-    ul.menu-list.js-menu-button
-        -
-            let menu = [
-                {url: "#", text: "Главная"},
-                {url: "#reg", text: "Регистрация"},
-                {url: "#aut", text: "Вход"},
-                {url: "#page1", text: "Страница 1"},
-                {url: "#page2", text: "Страница 2"}
-            ]
-        -let isPage = 0;
-        each element,i in menu
-            if isPage === i
-                +elementMenu("is-active", element)
-            else
-                +elementMenu("", element)
+mixin menu(numPage)
+    naw.menu
+        ul.menu-list.js-menu-button
+            -
+                let menu = [
+                    {url: "#", text: "Главная"},
+                    {url: "#reg", text: "Регистрация"},
+                    {url: "#aut", text: "Вход"},
+                    {url: "#page1", text: "Страница 1"},
+                    {url: "#page2", text: "Страница 2"}
+                ]
+            each element,i in menu
+                if numPage === i
+                    +elementMenu("is-active", element)
+                else
+                    +elementMenu("", element)
